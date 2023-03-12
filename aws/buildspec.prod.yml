@@ -15,7 +15,8 @@
         - echo `pwd`
         - echo $CODEBUILD_RESOLVED_SOURCE_VERSION
         - cd docker
-        - make build env=$ENV
+        - docker build -t onboarding-backend-yj .
+#        - make build env=$ENV
     post_build:
       commands:
         - echo Build completed on `date`

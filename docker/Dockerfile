@@ -1,7 +1,7 @@
 
 FROM node
 
-MAINTAINER Yoojin Oh <yj.oh@teamsparta>
+MAINTAINER Yoojin Oh <yj.oh@teamsparta.co>
 
 # Working directory /app 생성
 RUN mkdir -p /app
