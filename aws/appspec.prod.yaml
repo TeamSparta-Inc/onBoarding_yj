@@ -5,5 +5,6 @@ Resources:
       Properties:
         TaskDefinition: "arn:aws:ecs:ap-northeast-1:497217256558:task-definition/onboarding-yj-td:2",
         LoadBalancerInfo:
-          ContainerName: "onboardingDH-nginx-prod"
-          ContainerPort: 80
+#          ContainerName: "onboardingYJ-nginx-prod"
+          ContainerName: "onboarding-backend-yj"
+          ContainerPort: 9999
