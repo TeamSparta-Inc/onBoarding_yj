@@ -6,4 +6,4 @@ Resources:
         TaskDefinition: "arn:aws:ecs:ap-northeast-1:497217256558:task-definition/onboarding-yj-td:8"
         LoadBalancerInfo:
           ContainerName: "onboarding-backend-yj"
-          ContainerPort: 9999
+          ContainerPort: 3000
