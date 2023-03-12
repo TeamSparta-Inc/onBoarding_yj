@@ -7,4 +7,4 @@ build:
 
 push:
 	@aws ecr get-login-password --region ap-northeast-1 | docker login --username AWS --password-stdin ${ECR_URI}
-	@docker push ${ECR_URI}
+	@docker push ${ECR_BACKEND}
