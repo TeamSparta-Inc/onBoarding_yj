@@ -14,14 +14,14 @@
         - echo Building the Docker image...
         - echo `pwd`
         - echo $CODEBUILD_RESOLVED_SOURCE_VERSION
-        - cd docker
+#        - cd docker
         - docker build -t onboarding-backend-yj .
 #        - make build env=$ENV
     post_build:
       commands:
         - echo Build completed on `date`
         - echo Pushing the Docker image...
-        - make push env=$ENV
+#        - make push env=$ENV
         - printf '[{"name":"onboarding-nginx","imageUri":"%s"}]' $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/onboardingwy-nginx:latest > imagedefinitions.$ENV.json
 
   artifacts:
