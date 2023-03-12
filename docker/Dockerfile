@@ -10,6 +10,7 @@ RUN mkdir -p /app
 WORKDIR /app
 
 # package.json 과 package-lock.json을 복사
+RUN echo pwd
 COPY package*.json /app/
 
 # 의존성 설치
