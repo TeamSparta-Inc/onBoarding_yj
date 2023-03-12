@@ -7,6 +7,7 @@
     pre_build:
       commands:
         - echo Logging in to Amazon ECR...
+#        ecr에 올리려고 토큰을 받아오는 과정
         - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com
     build:
       commands:
@@ -16,6 +17,8 @@
         - echo $CODEBUILD_RESOLVED_SOURCE_VERSION
 #        - cd docker
 #        - docker build -t onboarding-backend-yj .
+
+#        - make build를 실행하면 Makefile을 실행
         - make build
     post_build:
       commands:
@@ -29,3 +32,4 @@
 #      - docker/imagedefinitions.$ENV.json
       - aws/taskdef.$ENV.json
       - aws/appspec.$ENV.yaml
+#      - S3에 업로드
