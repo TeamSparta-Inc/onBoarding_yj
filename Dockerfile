@@ -1,4 +1,3 @@
-
 FROM node
 
 MAINTAINER Yoojin Oh <yj.oh@teamsparta.co>
@@ -10,14 +9,13 @@ RUN mkdir -p /app
 WORKDIR /app
 
 # package.json 과 package-lock.json을 복사
-RUN echo pwd
-COPY package*.json /app/
+COPY package*.json .
 
 # 의존성 설치
 RUN npm install
 
 # 앱 소스코드 추가
-COPY ../.. .
+COPY . .
 
 # 오픈할 포트를 지정
 EXPOSE 3000
